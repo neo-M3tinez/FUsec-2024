@@ -1,29 +1,27 @@
 # Web 1: IsH0wSp33d 
 
-![331861960-5be8fafd-efaa-4808-a969-b0ea199197fb](https://github.com/j10nelop/Pr1vate/assets/152776722/c040f3cf-8289-47b0-8070-067431864946)
+![346514618-c040f3cf-8289-47b0-8070-067431864946](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/b7b888b1-57ba-435f-8967-0f00af761ff5)
 
 
 1. Initial reconnaissance:
 
 + đầu tiên trong web khi nhập ta có được 1 số thông tin về template thông báo not found search bar
 
-![331866162-a8e83a5f-2fbf-49f3-a3cd-639b3ba3e774](https://github.com/j10nelop/Pr1vate/assets/152776722/ce74e7e4-74b9-424c-8b94-03da382fc542)
+![346514742-ce74e7e4-74b9-424c-8b94-03da382fc542](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/70830fd6-4869-48bd-9cdc-e8c396c8ab21)
 
 
 => điều kì lạ xảy ra khi ta không nhập 1 thông tin gì vào mục search thì nó hiện ra thông tin là **hello, velocity!**
 
-![331871351-c5b5bc02-3753-4552-a688-40f12ee36bb7](https://github.com/j10nelop/Pr1vate/assets/152776722/7dbb24da-2ac9-455b-a1c1-2787ddcb5188)
-
+![346514768-7dbb24da-2ac9-455b-a1c1-2787ddcb5188](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/7d367023-25a8-47ae-84a1-c995dac34815)
 
 
 + lúc đầu do chưa biết rõ về thông tin lỗ hổng đó nên mình dùng thử brupsuite pro quét qua cái test case trong đó thì mình  tìm ra được lỗ hổng ssti và test case của nó được encode url
 
-![331871403-242ac0f1-da81-44af-abef-22c058f43dd7](https://github.com/j10nelop/Pr1vate/assets/152776722/98ebf14b-24f8-46f3-982b-14287195b037)
-
+![346514812-98ebf14b-24f8-46f3-982b-14287195b037](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/5976b62d-76f3-49c1-8781-650f5195ade2)
 
 sau khi decode thì mình được 1 payload có dạng 
 
-![331871499-6c22eb27-a249-44b9-9e1e-829641d49058](https://github.com/j10nelop/Pr1vate/assets/152776722/f21c3d2e-5c71-41b7-9311-f3985298f33b)
+![346514848-f21c3d2e-5c71-41b7-9311-f3985298f33b](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/b4e75f74-7f53-4595-8f5b-f687e35acec5)
 
 
 sau khi lọc ra test thì ta được payload 
@@ -32,8 +30,7 @@ sau khi lọc ra test thì ta được payload
 #set ($a=7*7) ${a}
 ```
 
-![331871571-39e282b7-d9de-4310-aa49-944b68f5209d](https://github.com/j10nelop/Pr1vate/assets/152776722/efc9f052-62f0-45b6-b8ae-666ada079507)
-
+![346515510-efc9f052-62f0-45b6-b8ae-666ada079507](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/5c79caff-c583-46ae-8892-ebd964f239bc)
 
 => có vẻ đoán chắc đây là lỗ hổng ssti nhưng ở dạng velocity template sau khi được search 
 
@@ -46,8 +43,7 @@ payload: solve
 
 # Web 2: web-secu-challenge 
 
-![333806229-6331738d-8c6b-4a56-8f67-6038fc6fcd45](https://github.com/j10nelop/Pr1vate/assets/152776722/df6a5651-9f47-49c1-bfc8-8bb2a12b64ad)
-
+![346515458-df6a5651-9f47-49c1-bfc8-8bb2a12b64ad](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/82897c54-9ef5-4eb9-b7b6-4a52d8279674)
 
 
 payload 
@@ -82,7 +78,7 @@ echo $serialized;
 
 ```
 
-![333806259-7b11fc06-abb6-4f0b-a83e-bb9596201dd3](https://github.com/j10nelop/Pr1vate/assets/152776722/faf512e5-0d61-43a5-bca0-fe6010c336eb)
+![346515577-faf512e5-0d61-43a5-bca0-fe6010c336eb](https://github.com/neo-M3tinez/FUsec-2024/assets/174318737/7104e74d-e98c-4ee7-babd-36e98925c968)
 
 
 => flag: Fusec{flag-418e9146}
